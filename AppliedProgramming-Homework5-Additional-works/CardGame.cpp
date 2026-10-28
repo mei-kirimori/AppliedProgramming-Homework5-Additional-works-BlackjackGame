@@ -185,24 +185,35 @@ void judge(int playerTotal, int dealerTotal, CardGame& player, CardGame& dealer)
 	{
 		player.SetDrawCount(1);
 		cout << "Draw!" << endl;
+		return;
 	}
 	else if(22>=playerTotal&&22<=dealerTotal)
 	{
 		player.SetWinCount(1);
 		cout << "dealer bust! " ;
 		cout << "You win!" << endl;
+		return;
+	}
+	else if (22 <= playerTotal && 22 >= dealerTotal)
+	{
+		player.SetLoseCount(1);
+		cout << "player bust! ";
+		cout << "You lose!" << endl;
+		return;
 	}
 	else if (playerTotal == dealerTotal)
 	{
 		player.SetDrawCount(1);
 		cout << "Draw!" << endl;
+		return;
 	}
 	else if (playerTotal > dealerTotal)
 	{
 		player.SetWinCount(1);
 		cout << "You win!" << endl;
+		return;
 	}
-	else
+	else 
 	{
 		player.SetLoseCount(1);
 		cout << "You lose!" << endl;
