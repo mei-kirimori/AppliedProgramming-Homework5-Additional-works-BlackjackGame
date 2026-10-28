@@ -150,6 +150,7 @@ void CardGame::GameStart()
 	for (int choice = 0, i = 2; choice != 2;i++)
 	{
 		cout << "hit or stand?" << endl << "1. hit" << endl << "2. stand" << endl;
+		cout << "input comand ";
 		cin >> choice;
 
 
