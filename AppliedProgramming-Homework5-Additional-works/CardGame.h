@@ -13,6 +13,7 @@ enum Card
 class  CardGame
 {
 public:
+	CardGame();
 	int GetCard(int th);
 	int GetWinCount();
 	int GetLoseCount();
@@ -27,7 +28,7 @@ public:
 	int TotalCardValue();
 	void Dealer17();
 private:
-	int playerCard[10] = {};
+	int playerCard[10];
 	int winCount;
 	int loseCount;
 	int drawCount;

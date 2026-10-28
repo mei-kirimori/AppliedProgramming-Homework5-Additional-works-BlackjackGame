@@ -1,5 +1,17 @@
 ﻿#include "CardGame.h"
 
+CardGame::CardGame()
+{
+	for (int i = 0; i < 10; i++)
+	{
+		playerCard[i] = 0;
+	}
+	winCount = 0;
+	loseCount = 0;
+	drawCount = 0;
+	totalCardValue = 0;
+}
+
 int CardGame::GetCard(int th)
 {
 	return playerCard[th];
